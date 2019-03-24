@@ -54,6 +54,9 @@
     <ClInclude Include="DestinationToCurrencyValidator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="BaseDesToClass_DesToCurre.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Form.cpp">
@@ -87,6 +90,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DestinationToCurrencyValidator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseDesToClass_DesToCurre.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

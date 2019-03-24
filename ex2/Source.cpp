@@ -112,13 +112,13 @@ int main()
 	classField->addValidetor(classValidator.get());
 	currencyField->addValidetor(currencyValidator.get()); 
 
-	//// Creating form validators
-	auto destinationToClassValidator
+	// Creating form validators
+	/*auto destinationToClassValidator
 		= std::make_unique<DestinationToClassValidator<Field<ValuesToNames<DestinationNames>>,Field<ValuesToNames<ClassNames>>>>
 		(destinationField.get(), classField.get());
-	//auto destinationToCurrencyValidator
-	//	= std::make_unique<DestinationToCurrencyValidator<Field<ValuesToNames<DestinationNames>>,Field<ValuesToNames<CurrencyNames>>>>
-	//	(destinationField.get(), currencyField.get());
+	auto destinationToCurrencyValidator
+		= std::make_unique<DestinationToCurrencyValidator<Field<ValuesToNames<DestinationNames>>,Field<ValuesToNames<CurrencyNames>>>>
+		(destinationField.get(), currencyField.get());*/
 
 	//// Creating the form and adding the fields to it
 	Form myForm;
@@ -130,9 +130,9 @@ int main()
 	myForm.addField(currencyField.get());
 
 	//// Adding form validators
-	//myForm.addValidator(destinationToClassValidator.get());
-	//myForm.addValidator(destinationToCurrencyValidator.get());
-
+	/*myForm.addValidator(destinationToClassValidator.get());
+	myForm.addValidator(destinationToCurrencyValidator.get());
+*/
 	// Getting the information from the user
 	clearScreen();
 	displayWelcomeMessage(std::cout);
