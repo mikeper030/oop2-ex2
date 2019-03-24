@@ -113,9 +113,9 @@ int main()
 	currencyField->addValidetor(currencyValidator.get()); 
 
 	//// Creating form validators
-	//auto destinationToClassValidator
-	//	= std::make_unique<DestinationToClassValidator<Field<ValuesToNames<DestinationNames>>,Field<ValuesToNames<ClassNames>>>>
-	//	(destinationField.get(), classField.get());
+	auto destinationToClassValidator
+		= std::make_unique<DestinationToClassValidator<Field<ValuesToNames<DestinationNames>>,Field<ValuesToNames<ClassNames>>>>
+		(destinationField.get(), classField.get());
 	//auto destinationToCurrencyValidator
 	//	= std::make_unique<DestinationToCurrencyValidator<Field<ValuesToNames<DestinationNames>>,Field<ValuesToNames<CurrencyNames>>>>
 	//	(destinationField.get(), currencyField.get());
