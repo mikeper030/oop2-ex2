@@ -5,15 +5,19 @@
 #include <memory>
 #include <iostream>
 #include "BaseDesToClass_DesToCurre.h"
+#include "BaseField.h"
+#include "Field.h"
+
 
 
 class Form
 {
 public:
 	Form();
-	void addField(BaseField* field);
+	void addField(BaseField * field);
 	void addValidator();
 	void fillForm();
+	bool validateForm();
 	~Form();
 private:
 	std::vector<std::unique_ptr<BaseField>> m_field;
