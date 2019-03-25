@@ -2,10 +2,6 @@
 
 
 
-
-
-
-
 NoDigitValidator::NoDigitValidator()
 	:BaseValidator(" Can't contain digits ")
 {

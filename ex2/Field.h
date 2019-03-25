@@ -45,3 +45,8 @@ inline void Field<T>::PrintData(std::ostream & os)
 {
 	os << m_field;
 }
+
+template<typename T>
+inline Field<T>::~Field()
+{
+}

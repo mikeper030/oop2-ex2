@@ -34,3 +34,8 @@ bool Form::validateForm()
 Form::~Form()
 {
 }
+
+std::ostream & operator<<(std::ostream & os, const Form & obj)
+{
+	// TODO: insert return statement here
+}

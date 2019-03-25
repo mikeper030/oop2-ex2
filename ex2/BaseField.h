@@ -17,7 +17,8 @@ public:
 	void printError(std::ostream & os);
 
 
-	~BaseField();
+	virtual~BaseField();
+
 private:
 	std::string m_messeng;
 protected:

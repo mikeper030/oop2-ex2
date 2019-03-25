@@ -18,6 +18,7 @@ public:
 	void addValidator();
 	void fillForm();
 	bool validateForm();
+	friend std::ostream& operator<<(std::ostream& os, const Form& obj);
 	~Form();
 private:
 	std::vector<std::unique_ptr<BaseField>> m_field;
@@ -25,3 +26,4 @@ private:
 
 };
 
+std::ostream& operator<<(std::ostream& os, const Form& obj);
