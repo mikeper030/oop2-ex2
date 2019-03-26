@@ -3,10 +3,3 @@
 
 
 
-
-
-
-
-BaseField::~BaseField()
-{
-}

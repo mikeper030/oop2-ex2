@@ -6,7 +6,7 @@ template <typename T>
 class Field :public BaseField
 {
 public:
-	Field(T& t1):m_field(t1) {};
+	Field(std::string& t1):m_field(t1) {};
 	virtual void addValidetor(BaseValidator * validator)
 	{
 		m_validators.push_back(validator);
