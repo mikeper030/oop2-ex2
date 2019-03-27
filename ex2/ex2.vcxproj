@@ -121,8 +121,6 @@
     <ClInclude Include="ClassNames.h" />
     <ClInclude Include="CurrencyNames.h" />
     <ClInclude Include="DestinationNames.h" />
-    <ClInclude Include="DestinationToClassValidator.h" />
-    <ClInclude Include="DestinationToCurrencyValidator.h" />
     <ClInclude Include="Field.h" />
     <ClInclude Include="Form.h" />
     <ClInclude Include="IdValidator.h" />
@@ -137,8 +135,6 @@
     <ClCompile Include="ClassNames.cpp" />
     <ClCompile Include="CurrencyNames.cpp" />
     <ClCompile Include="DestinationNames.cpp" />
-    <ClCompile Include="DestinationToClassValidator.cpp" />
-    <ClCompile Include="DestinationToCurrencyValidator.cpp" />
     <ClCompile Include="Form.cpp" />
     <ClCompile Include="IdValidator.cpp" />
     <ClCompile Include="NoDigitValidator.cpp" />

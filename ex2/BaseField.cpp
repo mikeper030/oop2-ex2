@@ -1,8 +1,6 @@
 #include "BaseField.h"
 
-
-
-
+#include "BaseValidator.h"
 
 
 bool BaseField::validator()
@@ -21,11 +19,10 @@ void BaseField::printMessege(std::ostream & os)
 }
 
 void BaseField::printError(std::ostream & os)
-{
+{	
 	for (size_t i = 0; i < m_validator.size(); i++)
 		if (!m_validator[i]->check(*this))
 			m_validator[i]->printError(std::cout);
-	
 }
 
 BaseField::~BaseField()

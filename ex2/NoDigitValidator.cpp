@@ -7,10 +7,10 @@ NoDigitValidator::NoDigitValidator()
 {
 }
 
-bool NoDigitValidator::check(BaseField & obj)const
+bool NoDigitValidator::check(BaseField & obj)
 {
 	std::string name = dynamic_cast<Field<std::string>&>(obj).getField();
-	
+
 	if (name.empty())
 		return false;
 	for (size_t i = 0; i < name.length(); i++)
@@ -20,6 +20,7 @@ bool NoDigitValidator::check(BaseField & obj)const
 	}
 	return true;
 }
+
 
 NoDigitValidator::~NoDigitValidator()
 {

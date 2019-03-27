@@ -1,4 +1,4 @@
-#pragma once
+ #pragma once
 #include "Field.h"
 #include <iostream>
 
@@ -10,7 +10,8 @@ public:
 	ValuesToNames();
 	~ValuesToNames();
 private:
-	T m_ValueName
+	T m_ValueName;
+
 };
 
 template <typename T>
