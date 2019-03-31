@@ -1,8 +1,11 @@
 #pragma once
-class ClassNames
+#include <map>
+#include "BaseNames.h"
+class ClassNames : public BaseNames
 {
 public:
 	ClassNames();
-	~ClassNames();
+	int getMinIndex() const override;
+	int getMaxIndex() const override;
 };
 

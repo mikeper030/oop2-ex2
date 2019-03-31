@@ -1,26 +1,22 @@
 #pragma once
 #include "BaseField.h"
 #include <memory>
-template <typename T>
+
+template <class T>
 class Field :public BaseField
 {
 public:
-
-
-	Field(std::string mes):BaseField(mes) {};
-
-	virtual void addValidetor(BaseValidator * validator)
-	{
-		m_validator.push_back(validator);
-	}
 	
-	T getField();
+	Field(const std::string& mes)
+		:BaseField(mes) {};
+	
+	T getData() const;
 
-	virtual void readData()override;
+	void printData(std::ostream & os) const override;
+	
+	 void readData() override ;
 
-	virtual void PrintData(std::ostream & os);
-
-	~Field();
+	
 
 private:
 
@@ -28,25 +24,29 @@ private:
 
 };
 
-template <typename T>
-inline T Field<T>::getField()
+//***************************************************************************//
+//**							getData	
+//***************************************************************************//
+template<typename T>
+inline T Field<T>::getData() const
 {
 	return m_field;
 }
 
+//***************************************************************************//
+//**							printData	
+//***************************************************************************//
 template<typename T>
-inline void Field<T>::readData()
-{
-	std::cin >> m_field;
-}
-
-template<typename T>
-inline void Field<T>::PrintData(std::ostream & os)
+inline void Field<T>::printData(std::ostream & os) const
 {
 	os << m_field;
 }
 
+//***************************************************************************//
+//**							readData	
+//***************************************************************************//
 template<typename T>
-inline Field<T>::~Field()
+inline void Field<T>::readData()
 {
+	std::cin >> m_field;
 }

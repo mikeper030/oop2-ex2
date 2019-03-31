@@ -4,14 +4,18 @@
 #include<iostream>
 #include "BaseField.h"
 
-
 class BaseValidator
 {
 public:
 	BaseValidator(const std::string & str) :m_message(str) {};
-	void printError( std::ostream & os);
-	virtual bool check(BaseField & obj)const = 0;
-	virtual ~BaseValidator();
+	void printError(std::ostream & os)
+	{
+	 os << m_message;	
+	}
+	
+	//Description:	
+	virtual bool check(BaseField&) const = 0;
+	
 
 private:
 	std::string  m_message;

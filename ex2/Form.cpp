@@ -9,33 +9,61 @@ Form::Form()
 
 void Form::addField(BaseField* field)
 {
-	m_field.push_back(field);
+	m_fields.push_back(field);
 }
 
 
 void Form::fillForm()
 {
 	
-	for (size_t i = 0; i < m_field.size(); i++)
-	{
-		m_field[i]->printMessege(std::cout);
-		std::cout << std::endl;
-		m_field[i]->readData();
-	}
+	bool fieldsValid = true;
+
+	for (const auto & field : m_fields)
+		if (!field->validate())
+		{
+			fieldsValid = false;
+
+			field->printMessage(std::cout);
+			std::cout << std::endl;
+			field->readData();
+		}
+
+	if (fieldsValid)
+		for (const auto & validator : m_complex_validators)
+			if (!validator->check())
+			{
+				validator->printError(std::cout);
+				std::cout << std::endl;
+				validator->readData();
+			}
 }
 
 bool Form::validateForm()
 {
-	return false;
-}
+	for (const auto & field : m_fields)
+		if (!field->validate())
+			return false;
 
+	for (const auto & validator : m_complex_validators)
+		if (!validator->check())
+			return false;
 
-
-Form::~Form()
-{
+	return true;
 }
 
 std::ostream & operator<<(std::ostream & os, const Form & obj)
 {
-	// TODO: insert return statement here
+	for (const auto &field : obj.m_fields)
+	{
+		os << "----------------------------------------------------------\n";
+		field->printMessage(os);
+		os << " = ";
+		field->printData(os);
+		os << " ";
+		field->printError(os);
+		os << std::endl;
+		os << "----------------------------------------------------------\n";
+	}
+
+	return os;
 }
