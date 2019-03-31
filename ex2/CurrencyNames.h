@@ -1,9 +1,9 @@
 #pragma once
-#include "AbsName.h"
-class CurrencyNames :public AbsName
+#include "BaseNames.h"
+class CurrencyNames :public BaseNames
 {
 public:
 	CurrencyNames();
-	~CurrencyNames();
+	
 };
 

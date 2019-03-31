@@ -2,26 +2,30 @@
 
 
 
+//***************************************************************************//
+//**							 NoDigitValidator	
+//***************************************************************************//
 NoDigitValidator::NoDigitValidator()
-	:BaseValidator(" Can't contain digits ")
+	:BaseValidator::BaseValidator("Can't contain digits")
 {
 }
 
-bool NoDigitValidator::check(BaseField & obj)
-{
-	std::string name = dynamic_cast<Field<std::string>&>(obj).getField();
 
-	if (name.empty())
+
+//***************************************************************************//
+//**							 check	
+//***************************************************************************//
+bool NoDigitValidator::check(BaseField& obj) const
+{
+	std::string data = dynamic_cast<Field<std::string>&>(obj).getData();
+
+	if (data.empty())
 		return false;
-	for (size_t i = 0; i < name.length(); i++)
-	{
-		if (isdigit(name[i]))
+
+	for (int i = 0; i < int(data.length()); i++)
+		if (isdigit(data[i]))
 			return false;
-	}
+
 	return true;
 }
 
-
-NoDigitValidator::~NoDigitValidator()
-{
-}

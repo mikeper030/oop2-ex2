@@ -1,9 +1,14 @@
 #pragma once
-#include "AbsName.h"
-class DestinationNames :public AbsName
+#include "BaseValidator.h"
+#include <iostream>
+#include <map>
+#include "BaseNames.h"
+class DestinationNames : public BaseNames
 {
 public:
 	DestinationNames();
-	~DestinationNames();
+	int getMinIndex() const override;
+	int getMaxIndex() const override;
+
 };
 

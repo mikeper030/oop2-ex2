@@ -48,10 +48,16 @@
     <ClInclude Include="CurrencyNames.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BaseDesToClass_DesToCurre.h">
+    <ClInclude Include="DestinationToClassValidator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="AbsName.h">
+    <ClInclude Include="DestinationToCurrencyValidator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseXtoYValidator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseNames.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -63,12 +69,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="BaseField.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Source.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BaseValidator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="IdValidator.cpp">
@@ -83,10 +83,19 @@
     <ClCompile Include="CurrencyNames.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BaseDesToClass_DesToCurre.cpp">
+    <ClCompile Include="BaseValidator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="AbsName.cpp">
+    <ClCompile Include="BaseXtoYValidator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseNames.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ValuesToNames.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

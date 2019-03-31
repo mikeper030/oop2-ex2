@@ -1,63 +1,69 @@
 #include "Form.h"
 #include <iostream>
+#include "BaseField.h"
 
 
-static int n = 0;
 Form::Form()
 {
 }
 
 void Form::addField(BaseField* field)
 {
-	m_field.push_back(field);
+	m_fields.push_back(field);
 }
 
 
 void Form::fillForm()
 {
-	for (size_t i = 0; i < m_field.size(); i++)
-	{
-		if (!m_field[i]->validator() || n < 3) {
-			m_field[i]->printMessege(std::cout);
+	
+	bool fieldsValid = true;
+
+	for (const auto & field : m_fields)
+		if (!field->validate())
+		{
+			fieldsValid = false;
+
+			field->printMessage(std::cout);
 			std::cout << std::endl;
-			m_field[i]->readData();
-			std::cout << std::endl;
-			n++;
+			field->readData();
 		}
-	}
+
+	if (fieldsValid)
+		for (const auto & validator : m_complex_validators)
+			if (!validator->check())
+			{
+				validator->printError(std::cout);
+				std::cout << std::endl;
+				validator->readData();
+			}
 }
 
 bool Form::validateForm()
 {
-	int i = 0;
-	for (; i < m_field.size(); i++)
-	{
-		if (!m_field[i]->validator())
+	for (const auto & field : m_fields)
+		if (!field->validate())
 			return false;
-	}
-	/*if (i == m_field.size())
-	{
-		
-	}*/
+
+	for (const auto & validator : m_complex_validators)
+		if (!validator->check())
+			return false;
+
 	return true;
-}
-
-
-
-Form::~Form()
-{
 }
 
 std::ostream & operator<<(std::ostream & os, const Form & obj)
 {
-	for (size_t i = 0; i < obj.m_field.size(); i++)
+	for (const auto &field : obj.m_fields)
 	{
-		obj.m_field[i]->printMessege(std::cout);
-		std::cout <<std::endl;
-		obj.m_field[i]->PrintData(std::cout);
-		std::cout << std::endl;
-		obj.m_field[i]->printError(std::cout);
-		std::cout << std::endl;
+		os << "----------------------------------------------------------\n";
+		field->printMessage(os);
+		os << " = ";
+		field->printData(os);
+		os << " ";
+		field->printError(os);
+		os << std::endl;
+		os << "----------------------------------------------------------\n";
 	}
+
 	return os;
 }

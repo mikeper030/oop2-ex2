@@ -1,31 +1,62 @@
- #pragma once
-#include "Field.h"
+#pragma once
 #include <iostream>
-
-
+#include "BaseNames.h"
+#include "DestinationNames.h"
+#include "ClassNames.h"
 template <typename T>
 class ValuesToNames
 {
 public:
-	ValuesToNames() {};
-	~ValuesToNames();
-	friend std::ostream & operator<<(const std::ostream & os, const T t);
-	friend std::ifstream & operator>>(const std::ifstream & is, const T t);
-
+	ValuesToNames();
+	T getData() const;
+	int m_key;
 private:
-	T m_ValueName;
-
+	T val;
 };
+std::ostream& operator<<(std::ostream& os,const  ValuesToNames<DestinationNames>& obj);
+std::ostream& operator<<(std::ostream& os,const  ValuesToNames<ClassNames>& obj);
+std::istream& operator>>(std::istream& is, ValuesToNames<ClassNames> obj);
+std::istream & operator>>(std::istream & is, ValuesToNames<DestinationNames>  obj);
 
-
-template <typename T>
-std::ostream & operator<<(const std::ostream & os, const T t)
+template<typename T>
+inline ValuesToNames<T>::ValuesToNames()
 {
-	os << t;
+}
+template<typename T>
+inline T ValuesToNames<T>::getData() const
+{
+	return val;
+}
+//template specializations//==================
+template<>
+inline ClassNames ValuesToNames<ClassNames>::getData() const
+{
+	return ClassNames ();
 }
 
-template <typename T>
-std::ifstream & operator>>(const std::ifstream & is, const T t)
+template<>
+inline DestinationNames ValuesToNames<DestinationNames>::getData() const
 {
-	is >> t;
+	return DestinationNames();
+}
+template <typename T>
+//===================================================================
+bool operator<(const ValuesToNames<T>& left, const ValuesToNames<T>& right)
+{
+	if (left.m_faculty < right.m_faculty)
+		return true;
+
+	return false;
+}
+
+//***************************************************************************//
+//**							operator>	
+//***************************************************************************//
+template <typename T>
+bool operator>(const ValuesToNames<T>& left, const ValuesToNames<T>& right)
+{
+	if (left.m_faculty > right.m_faculty)
+		return true;
+
+	return false;
 }

@@ -1,5 +1,5 @@
 #include "IdValidator.h"
-#include "Field.h"
+
 
 
 IdValidator::IdValidator()
@@ -7,10 +7,9 @@ IdValidator::IdValidator()
 {
 }
 
-bool IdValidator::check(BaseField & obj) 
+bool IdValidator::check(BaseField& obj) const
 {
-	std::string name = std::to_string(dynamic_cast<Field<uint32_t>&>(obj).getField());
-
+	std::string name = std::to_string(dynamic_cast<Field<uint32_t>&>(obj).getData());
 	int nSum = 0;
 	int nDigits = name.length();
 	int nParity = (nDigits - 1) % 2;
@@ -30,6 +29,4 @@ bool IdValidator::check(BaseField & obj)
 }
 
 
-IdValidator::~IdValidator()
-{
-}
+
