@@ -115,6 +115,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AbsName.h" />
     <ClInclude Include="BaseDesToClass_DesToCurre.h" />
     <ClInclude Include="BaseField.h" />
     <ClInclude Include="BaseValidator.h" />
@@ -129,6 +130,7 @@
     <ClInclude Include="ValuesToNames.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AbsName.cpp" />
     <ClCompile Include="BaseDesToClass_DesToCurre.cpp" />
     <ClCompile Include="BaseField.cpp" />
     <ClCompile Include="BaseValidator.cpp" />

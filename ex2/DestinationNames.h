@@ -1,5 +1,6 @@
 #pragma once
-class DestinationNames
+#include "AbsName.h"
+class DestinationNames :public AbsName
 {
 public:
 	DestinationNames();

@@ -1,5 +1,6 @@
 #pragma once
-class ClassNames
+#include "AbsName.h"
+class ClassNames :public AbsName
 {
 public:
 	ClassNames();

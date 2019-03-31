@@ -1,5 +1,6 @@
 #pragma once
-class CurrencyNames
+#include "AbsName.h"
+class CurrencyNames :public AbsName
 {
 public:
 	CurrencyNames();
