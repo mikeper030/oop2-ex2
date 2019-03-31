@@ -7,6 +7,7 @@
 std::ostream & operator<<(std::ostream & os,const ValuesToNames<DestinationNames>& obj)
 {
 	std::map<int,std::string> dn = obj.getData().getData();
+	
 	//os << dn.at(obj.m_key);
 	return os;
 }

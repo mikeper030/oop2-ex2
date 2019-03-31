@@ -126,7 +126,7 @@ int main()
 	myForm.addField(idField.get());
 	myForm.addField(yearOfBirthField.get());
 	myForm.addField(destinationField.get());
-	//myForm.addField(classField.get());
+	myForm.addField(classField.get());
 	//myForm.addField(currencyField.get());
 
 	//// Adding form validators

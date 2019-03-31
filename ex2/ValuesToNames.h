@@ -43,7 +43,7 @@ template <typename T>
 //===================================================================
 bool operator<(const ValuesToNames<T>& left, const ValuesToNames<T>& right)
 {
-	if (left.m_faculty < right.m_faculty)
+	if (left.m_key < right.m_key)
 		return true;
 
 	return false;
@@ -55,7 +55,7 @@ bool operator<(const ValuesToNames<T>& left, const ValuesToNames<T>& right)
 template <typename T>
 bool operator>(const ValuesToNames<T>& left, const ValuesToNames<T>& right)
 {
-	if (left.m_faculty > right.m_faculty)
+	if (left.m_key > right.m_key)
 		return true;
 
 	return false;

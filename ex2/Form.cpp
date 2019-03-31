@@ -2,7 +2,7 @@
 #include <iostream>
 #include "BaseField.h"
 
-
+static int n = 0;
 Form::Form()
 {
 }
@@ -18,15 +18,17 @@ void Form::fillForm()
 	
 	bool fieldsValid = true;
 
-	for (const auto & field : m_fields)
-		if (!field->validate())
+	for (const auto & field : m_fields) {
+		if (!field->validate() || n< 5)
 		{
 			fieldsValid = false;
 
 			field->printMessage(std::cout);
 			std::cout << std::endl;
 			field->readData();
+			n++;
 		}
+	}
 
 	if (fieldsValid)
 		for (const auto & validator : m_complex_validators)
