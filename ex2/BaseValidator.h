@@ -2,16 +2,18 @@
 #include <memory>
 #include <vector>
 #include<iostream>
+#include "BaseField.h"
 
 
 class BaseValidator
 {
 public:
-	BaseValidator();
-
-	virtual bool checking() = 0;
+	BaseValidator(const std::string & str) :m_message(str) {};
+	void printError( std::ostream & os);
+	virtual bool check(BaseField & obj)const = 0;
 	virtual ~BaseValidator();
 
 private:
+	std::string  m_message;
 };
 

@@ -3,6 +3,7 @@
 
 
 IdValidator::IdValidator()
+	:BaseValidator(" Wrong control digit ")
 {
 }
 

@@ -138,19 +138,19 @@ int main()
 	displayWelcomeMessage(std::cout);
 
 	// Get the input only for empty or not valid fields
-	//myForm.fillForm();
+	myForm.fillForm();
 
 	// Validation loop
-	//for (auto formIsCorrect = myForm.validateForm(); !formIsCorrect; formIsCorrect = myForm.validateForm())
-	//{
-	//	// Displays all form fields with value (and error if not valid)
-	//	clearScreen();
-	//	displayErrorMessage(std::cout);
+	for (auto formIsCorrect = myForm.validateForm(); !formIsCorrect; formIsCorrect = myForm.validateForm())
+	{
+		// Displays all form fields with value (and error if not valid)
+		clearScreen();
+		displayErrorMessage(std::cout);
 
-	//	displayFormFields(std::cout, myForm);
+		displayFormFields(std::cout, myForm);
 
-	//	myForm.fillForm();
-	//}
+		myForm.fillForm();
+	}
 
 	clearScreen();
 	displayGoodbyeMessage(std::cout);
@@ -158,10 +158,10 @@ int main()
 	return 0;
 }
 
-//void displayFormFields(std::ostream& ostr, const Form& form)
-//{
-//	ostr << form << '\n';
-//}
+void displayFormFields(std::ostream& ostr, const Form& form)
+{
+	ostr << form << '\n';
+}
 
 void displayWelcomeMessage(std::ostream& ostr)
 {
