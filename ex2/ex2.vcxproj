@@ -115,10 +115,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BaseComplexValidator.h" />
     <ClInclude Include="BaseField.h" />
     <ClInclude Include="BaseNames.h" />
     <ClInclude Include="BaseValidator.h" />
-    <ClInclude Include="BaseXtoYValidator.h" />
     <ClInclude Include="ClassNames.h" />
     <ClInclude Include="CurrencyNames.h" />
     <ClInclude Include="DestinationNames.h" />
@@ -132,10 +132,9 @@
     <ClInclude Include="ValuesToNames.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BaseComplexValidator.cpp" />
     <ClCompile Include="BaseField.cpp" />
     <ClCompile Include="BaseNames.cpp" />
-    <ClCompile Include="BaseValidator.cpp" />
-    <ClCompile Include="BaseXtoYValidator.cpp" />
     <ClCompile Include="ClassNames.cpp" />
     <ClCompile Include="CurrencyNames.cpp" />
     <ClCompile Include="DestinationNames.cpp" />

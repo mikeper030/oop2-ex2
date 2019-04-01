@@ -12,6 +12,11 @@ void Form::addField(BaseField* field)
 	m_fields.push_back(field);
 }
 
+void Form::addValidator(BaseComplexValidator *d)
+{
+	m_complex_validators.push_back(d);
+}
+
 
 void Form::fillForm()
 {
@@ -19,7 +24,7 @@ void Form::fillForm()
 	bool fieldsValid = true;
 
 	for (const auto & field : m_fields)
-		if ( n < 6 || !field->validate())
+		if (!field->validate()||n<6)
 		{
 			fieldsValid = false;
 

@@ -9,11 +9,17 @@ std::map<int, std::string>& BaseNames::getData()
 {
 	return m_names;
 }
-//no const ->used for input
-int & BaseNames::key()
+
+std::string BaseNames::getValue(int key) const
 {
-	return m_key;
+	std::string val = "";
+	auto it = m_names.find(key);
+	if (it != m_names.end()) 
+	val = it->second;
+		
+	return val;
 }
+
 
 
 

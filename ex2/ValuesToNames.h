@@ -3,6 +3,7 @@
 #include "BaseNames.h"
 #include "DestinationNames.h"
 #include "ClassNames.h"
+#include "CurrencyNames.h"
 template <typename T>
 class ValuesToNames
 {
@@ -17,6 +18,12 @@ std::ostream& operator<<(std::ostream& os,const  ValuesToNames<DestinationNames>
 std::ostream& operator<<(std::ostream& os,const  ValuesToNames<ClassNames>& obj);
 std::istream& operator>>(std::istream& is, ValuesToNames<ClassNames>& obj);
 std::istream & operator>>(std::istream & is, ValuesToNames<DestinationNames>&  obj);
+std::ostream& operator<<(std::ostream& os, const  ValuesToNames<CurrencyNames>& obj);
+std::istream & operator>>(std::istream & is, ValuesToNames<CurrencyNames>&  obj);
+bool operator==(const ValuesToNames<DestinationNames>&, const int&);
+bool operator==(const ValuesToNames<ClassNames>&, const int&);
+bool operator==(const ValuesToNames<CurrencyNames>&, const int&);
+
 
 template<typename T>
 inline ValuesToNames<T>::ValuesToNames()
@@ -39,24 +46,23 @@ inline DestinationNames ValuesToNames<DestinationNames>::getData() const
 {
 	return DestinationNames();
 }
+template<>
+inline CurrencyNames ValuesToNames<CurrencyNames>::getData() const
+{
+	return CurrencyNames();
+}
 template <typename T>
 //===================================================================
-bool operator<(const ValuesToNames<T>& left, const int n)
-{   
-	if (left.m_key < n)
-		return true;
-
-	return false;
+bool operator<(const ValuesToNames<T>& left, const int& a)
+{
+	return left.m_key < a;
 }
 
 //***************************************************************************//
 //**							operator>	
 //***************************************************************************//
 template <typename T>
-bool operator>(const ValuesToNames<T>& left, const int n)
+bool operator>(const ValuesToNames<T>& left, const int& a)
 {
-	if (left.m_key > n)
-		return true;
-
-	return false;
+	return left.m_key > a;
 }

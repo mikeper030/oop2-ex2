@@ -16,7 +16,7 @@ DestinationNames::DestinationNames()
 
 int DestinationNames::getMinIndex() const
 {
-	return 0;
+	return 1;
 }
 
 int DestinationNames::getMaxIndex() const

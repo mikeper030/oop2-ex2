@@ -38,3 +38,39 @@ std::istream & operator>>(std::istream & is, ValuesToNames<ClassNames>&  obj)
 
 	return is;
 }
+std::ostream & operator<<(std::ostream & os, const ValuesToNames<CurrencyNames>& obj)
+{
+	std::map<int, std::string> cn = obj.getData().getData();
+	auto it = cn.find(obj.m_key);
+	if (it != cn.end()) {
+		std::string i = it->second;
+		os << i;
+	}
+	return os;
+}
+std::istream & operator>>(std::istream & is, ValuesToNames<CurrencyNames>&  obj)
+{
+	is >> obj.m_key;
+
+	return is;
+}
+
+
+bool operator==(const ValuesToNames<DestinationNames>& o, const int & i)
+{
+	DestinationNames dn;
+	return dn.getValue(o.m_key) == dn.getValue(i);
+	
+}
+bool operator==(const ValuesToNames<CurrencyNames>&o, const int & i)
+{
+	CurrencyNames cn;
+	return cn.getValue(o.m_key) == cn.getValue(i);
+	
+}
+bool operator==(const ValuesToNames<ClassNames>&o, const int & i)
+{
+	ClassNames cln;
+	return cln.getValue(o.m_key) == cln.getValue(i);
+	
+}

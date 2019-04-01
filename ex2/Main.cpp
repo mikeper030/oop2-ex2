@@ -81,7 +81,7 @@ const int MAX_POSSIBLE_YEAR = 7;
 const int MIN_AGE = 15;
 const int MAX_AGE = 120;
 
-//------------------- main  ----------------------------
+//------------------- main ----------------------------
 
 int main()
 {
@@ -130,8 +130,8 @@ int main()
 	myForm.addField(currencyField.get());
 
 	//// Adding form validators
-	//myForm.addValidator(destinationToClassValidator.get());
-	//myForm.addValidator(destinationToCurrencyValidator.get());
+	myForm.addValidator(destinationToClassValidator.get());
+	myForm.addValidator(destinationToCurrencyValidator.get());
 
 	// Getting the information from the user
 	clearScreen();

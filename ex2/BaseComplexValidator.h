@@ -1,16 +1,18 @@
 #pragma once
 #include <string>
-class BaseXtoYValidator
+#include "BaseField.h"
+class BaseComplexValidator
 {
 public:
-	BaseXtoYValidator(const std::string);
-	
+	BaseComplexValidator(const std::string&msg);
+		
 	virtual bool check() const = 0;
-	
+
+		
 	virtual void readData() = 0;
 
+	//Description:	
 	void printError(std::ostream &) const;
-
 private:
 	std::string m_message;
 };
