@@ -14,7 +14,7 @@ ClassNames::ClassNames()
 
 int ClassNames::getMinIndex() const
 {
-	return 0;
+	return 1;
 }
 
 int ClassNames::getMaxIndex() const

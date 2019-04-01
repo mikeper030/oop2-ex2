@@ -1,7 +1,9 @@
 #pragma once
 #include "BaseField.h"
 #include <memory>
-
+#include "DestinationNames.h"
+#include"ValuesToNames.h"
+#include "ClassNames.h"
 template <class T>
 class Field :public BaseField
 {
@@ -16,10 +18,8 @@ public:
 	
 	 void readData() override ;
 
-	
-
 private:
-
+	
 	T m_field;
 
 };

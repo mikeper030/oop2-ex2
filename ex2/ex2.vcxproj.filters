@@ -54,10 +54,10 @@
     <ClInclude Include="DestinationToCurrencyValidator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BaseXtoYValidator.h">
+    <ClInclude Include="BaseNames.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="BaseNames.h">
+    <ClInclude Include="BaseComplexValidator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -83,12 +83,6 @@
     <ClCompile Include="CurrencyNames.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="BaseValidator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BaseXtoYValidator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -96,6 +90,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="ValuesToNames.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseComplexValidator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

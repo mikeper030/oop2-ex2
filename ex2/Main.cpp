@@ -93,8 +93,8 @@ int main()
 		"(1 - Rome, 2 - Prague, 3 - New York, 4 - India, 5 - Thailand)");
 	auto classField = std::make_unique<Field<ValuesToNames<ClassNames>>>("Which class you want?\n"
 		"(1 - First Class, 2 - Business Class, 3 - Economy Class)");
-	//auto currencyField = std::make_unique<Field<ValuesToNames<CurrencyNames>>>("In what currency will you pay?\n"
-	//	"(1 - NIS, 2 - Euro, 3 - Dollar)");
+	auto currencyField = std::make_unique<Field<ValuesToNames<CurrencyNames>>>("In what currency will you pay?\n"
+		"(1 - NIS, 2 - Euro, 3 - Dollar)");
 
 	// Creating the field validators
 	auto nameValidator = std::make_unique<NoDigitValidator>();
@@ -102,7 +102,7 @@ int main()
 	auto ageValidator = std::make_unique<RangeValidator<int>>(currentYear() - MAX_AGE, currentYear() - MIN_AGE);
 	auto destinationValidator = std::make_unique<RangeValidator<ValuesToNames<DestinationNames>>>(1, 5);
 	auto classValidator = std::make_unique<RangeValidator<ValuesToNames<ClassNames>>>(1, 3);
-	//auto currencyValidator = std::make_unique<RangeValidator<ValuesToNames<CurrencyNames>>>(1, 3);
+	auto currencyValidator = std::make_unique<RangeValidator<ValuesToNames<CurrencyNames>>>(1, 3);
 
 	// Adding the validators to the fields
 	nameField->addValidator(nameValidator.get());
@@ -110,15 +110,15 @@ int main()
 	yearOfBirthField->addValidator(ageValidator.get());     
 	destinationField->addValidator(destinationValidator.get());
 	classField->addValidator(classValidator.get());
-	//currencyField->addValidator(currencyValidator.get()); 
+	currencyField->addValidator(currencyValidator.get()); 
 
 	// Creating form validators
-	/*auto destinationToClassValidator
+	auto destinationToClassValidator
 		= std::make_unique<DestinationToClassValidator<Field<ValuesToNames<DestinationNames>>,Field<ValuesToNames<ClassNames>>>>
 		(destinationField.get(), classField.get());
 	auto destinationToCurrencyValidator
 		= std::make_unique<DestinationToCurrencyValidator<Field<ValuesToNames<DestinationNames>>,Field<ValuesToNames<CurrencyNames>>>>
-		(destinationField.get(), currencyField.get());*/
+		(destinationField.get(), currencyField.get());
 
 	//// Creating the form and adding the fields to it
 	Form myForm;
@@ -126,13 +126,13 @@ int main()
 	myForm.addField(idField.get());
 	myForm.addField(yearOfBirthField.get());
 	myForm.addField(destinationField.get());
-	//myForm.addField(classField.get());
-	//myForm.addField(currencyField.get());
+	myForm.addField(classField.get());
+	myForm.addField(currencyField.get());
 
 	//// Adding form validators
-	/*myForm.addValidator(destinationToClassValidator.get());
+	myForm.addValidator(destinationToClassValidator.get());
 	myForm.addValidator(destinationToCurrencyValidator.get());
-*/
+
 	// Getting the information from the user
 	clearScreen();
 	displayWelcomeMessage(std::cout);

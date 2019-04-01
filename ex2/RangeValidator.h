@@ -41,22 +41,4 @@ inline bool RangeValidator<T>::check(BaseField & obj) const
 	return true;
 }
 
-template<>
-inline bool RangeValidator<ValuesToNames<ClassNames>>::check(BaseField&) const
-{
-	ClassNames cn;
-	if (m_min<cn.getMinIndex() || m_max>cn.getMaxIndex())
-		return false;
 
-	return true;
-}
-
-template<>
-inline bool RangeValidator<ValuesToNames<DestinationNames>>::check(BaseField&) const
-{
-	DestinationNames dn;
-	if (m_min<dn.getMinIndex() || m_max>dn.getMaxIndex())
-		return false;
-
-	return true;
-}
