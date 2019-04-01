@@ -41,9 +41,9 @@ inline DestinationNames ValuesToNames<DestinationNames>::getData() const
 }
 template <typename T>
 //===================================================================
-bool operator<(const ValuesToNames<T>& left, const ValuesToNames<T>& right)
-{
-	if (left.m_key < right.m_key)
+bool operator<(const ValuesToNames<T>& left, const int n)
+{   
+	if (left.m_key < n)
 		return true;
 
 	return false;
@@ -53,9 +53,9 @@ bool operator<(const ValuesToNames<T>& left, const ValuesToNames<T>& right)
 //**							operator>	
 //***************************************************************************//
 template <typename T>
-bool operator>(const ValuesToNames<T>& left, const ValuesToNames<T>& right)
+bool operator>(const ValuesToNames<T>& left, const int n)
 {
-	if (left.m_key > right.m_key)
+	if (left.m_key > n)
 		return true;
 
 	return false;

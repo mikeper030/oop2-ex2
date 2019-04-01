@@ -19,7 +19,7 @@ void Form::fillForm()
 	bool fieldsValid = true;
 
 	for (const auto & field : m_fields)
-		if (!field->validate()||n<4)
+		if ( n < 6 || !field->validate())
 		{
 			fieldsValid = false;
 

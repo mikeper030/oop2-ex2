@@ -10,6 +10,10 @@ IdValidator::IdValidator()
 bool IdValidator::check(BaseField& obj) const
 {
 	std::string name = std::to_string(dynamic_cast<Field<uint32_t>&>(obj).getData());
+
+	if (name.empty())
+		return false;
+
 	int nSum = 0;
 	int nDigits = name.length();
 	int nParity = (nDigits - 1) % 2;
