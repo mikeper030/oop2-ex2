@@ -1,13 +1,13 @@
 #pragma once
 #include <string>
 #include "BaseField.h"
+#include "DestinationNames.h"
 class BaseComplexValidator
 {
 public:
 	BaseComplexValidator(const std::string&msg);
 		
 	virtual bool check() const = 0;
-
 		
 	virtual void readData() = 0;
 

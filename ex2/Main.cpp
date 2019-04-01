@@ -155,6 +155,7 @@ int main()
 	clearScreen();
 	displayGoodbyeMessage(std::cout);
 	displayFormFields(std::cout, myForm);
+	
 	return 0;
 }
 
