@@ -25,7 +25,6 @@ public:
 
 
 private:
-	bool is_ok = false;
 	std::string m_message;
 	std::vector<BaseValidator*> m_validators;
 

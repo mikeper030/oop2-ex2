@@ -20,6 +20,16 @@ std::string BaseNames::getValue(int key) const
 	return val;
 }
 
+int BaseNames::getMinIndex() const
+{
+	return 1;
+}
+
+int BaseNames::getMaxIndex() const
+{
+	return m_names.size();
+}
+
 
 
 

@@ -12,13 +12,5 @@ ClassNames::ClassNames()
 
 }
 
-int ClassNames::getMinIndex() const
-{
-	return 1;
-}
 
-int ClassNames::getMaxIndex() const
-{
-	return m_names.size();
-}
 

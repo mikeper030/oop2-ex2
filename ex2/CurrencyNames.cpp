@@ -12,12 +12,4 @@ CurrencyNames::CurrencyNames()
 }
 
 
-int CurrencyNames::getMinIndex() const
-{
-	return 1;
-}
 
-int CurrencyNames::getMaxIndex() const
-{
-	return m_names.size();
-}
