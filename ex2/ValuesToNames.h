@@ -17,7 +17,7 @@ private:
 std::ostream& operator<<(std::ostream& os,const  ValuesToNames<DestinationNames>& obj);
 std::ostream& operator<<(std::ostream& os,const  ValuesToNames<ClassNames>& obj);
 std::istream& operator>>(std::istream& is, ValuesToNames<ClassNames>& obj);
-std::istream & operator>>(std::istream & is, ValuesToNames<DestinationNames>&  obj);
+std::istream& operator>>(std::istream & is, ValuesToNames<DestinationNames>&  obj);
 std::ostream& operator<<(std::ostream& os, const  ValuesToNames<CurrencyNames>& obj);
 std::istream & operator>>(std::istream & is, ValuesToNames<CurrencyNames>&  obj);
 bool operator==(const ValuesToNames<DestinationNames>&, const int&);

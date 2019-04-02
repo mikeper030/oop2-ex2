@@ -13,7 +13,6 @@ public:
 	 os << m_message;	
 	}
 	
-	//Description:	
 	virtual bool check(BaseField&) const = 0;
 	
 

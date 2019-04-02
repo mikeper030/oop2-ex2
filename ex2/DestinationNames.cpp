@@ -14,16 +14,6 @@ DestinationNames::DestinationNames()
 	
 }
 
-int DestinationNames::getMinIndex() const
-{
-	return 1;
-}
-
-int DestinationNames::getMaxIndex() const
-{
-	return m_names.size();
-}
-
 
 
 

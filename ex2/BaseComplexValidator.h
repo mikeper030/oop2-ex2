@@ -10,8 +10,7 @@ public:
 	virtual bool check() const = 0;
 		
 	virtual void readData() = 0;
-
-	//Description:	
+	
 	void printError(std::ostream &) const;
 private:
 	std::string m_message;

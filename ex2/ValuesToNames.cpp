@@ -12,15 +12,23 @@ std::ostream & operator<<(std::ostream & os,const ValuesToNames<DestinationNames
 		std::string i = it->second;
 		os << i;
 	}
+	else
+	{
+		os << obj.m_key;
+	}
 	return os;
 }
 std::ostream & operator<<(std::ostream & os,const ValuesToNames<ClassNames>& obj)
 {
 	std::map<int, std::string> cn = obj.getData().getData();
 	auto it = cn.find(obj.m_key);
-	if (it != cn.end()) {
+	if(it != cn.end()) {
 		std::string i = it->second;
 		os << i;
+	}
+    else
+	{
+	os << obj.m_key;
 	}
 	return os;
 }
@@ -45,6 +53,9 @@ std::ostream & operator<<(std::ostream & os, const ValuesToNames<CurrencyNames>&
 	if (it != cn.end()) {
 		std::string i = it->second;
 		os << i;
+	}else
+	{
+		os << obj.m_key;
 	}
 	return os;
 }

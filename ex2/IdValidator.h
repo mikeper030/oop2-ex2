@@ -6,7 +6,6 @@ class IdValidator :public BaseValidator
 public:
 	
 	IdValidator();
-
 	virtual bool check(BaseField&) const override;
 };
 

@@ -11,12 +11,5 @@ CurrencyNames::CurrencyNames()
 	m_names.insert(std::pair<int, string>(3, "Dollar"));
 }
 
-int CurrencyNames::getMinIndex() const
-{
-	return 1;
-}
 
-int CurrencyNames::getMaxIndex() const
-{
-	return m_names.size();
-}
+

@@ -5,7 +5,5 @@ class ClassNames : public BaseNames
 {
 public:
 	ClassNames();
-	int getMinIndex() const override;
-	int getMaxIndex() const override;
 };
 
