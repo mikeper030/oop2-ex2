@@ -3,7 +3,12 @@
 #include "ClassNames.h"
 #include <string>
 #include <map>
+//============================   global function  =======================================
+							
 
+//=======================================================================================
+//								operator<<
+//=======================================================================================
 std::ostream & operator<<(std::ostream & os,const ValuesToNames<DestinationNames>& obj)
 {
 	std::map<int,std::string> dn = obj.getData().getData();
@@ -18,6 +23,9 @@ std::ostream & operator<<(std::ostream & os,const ValuesToNames<DestinationNames
 	}
 	return os;
 }
+//=======================================================================================
+//								operator<<
+//=======================================================================================
 std::ostream & operator<<(std::ostream & os,const ValuesToNames<ClassNames>& obj)
 {
 	std::map<int, std::string> cn = obj.getData().getData();
@@ -32,20 +40,27 @@ std::ostream & operator<<(std::ostream & os,const ValuesToNames<ClassNames>& obj
 	}
 	return os;
 }
-
+//=======================================================================================
+//								operator<<
+//=======================================================================================
 std::istream & operator>>(std::istream & is, ValuesToNames<DestinationNames>&  obj)
 {
 	is >> obj.m_key;
 
 	return is;
 }
-
+//=======================================================================================
+//								operator<<
+//=======================================================================================
 std::istream & operator>>(std::istream & is, ValuesToNames<ClassNames>&  obj)
 {
 	is >> obj.m_key;
 
 	return is;
 }
+//=======================================================================================
+//								operator<<
+//=======================================================================================
 std::ostream & operator<<(std::ostream & os, const ValuesToNames<CurrencyNames>& obj)
 {
 	std::map<int, std::string> cn = obj.getData().getData();
@@ -59,26 +74,36 @@ std::ostream & operator<<(std::ostream & os, const ValuesToNames<CurrencyNames>&
 	}
 	return os;
 }
+//=======================================================================================
+//								operator<<
+//=======================================================================================
 std::istream & operator>>(std::istream & is, ValuesToNames<CurrencyNames>&  obj)
 {
 	is >> obj.m_key;
 
 	return is;
 }
-
-
+//=======================================================================================
+//								operator ==
+//=======================================================================================
 bool operator==(const ValuesToNames<DestinationNames>& o, const int & i)
 {
 	DestinationNames dn;
 	return dn.getValue(o.m_key) == dn.getValue(i);
 	
 }
+//=======================================================================================
+//								operator ==
+//=======================================================================================
 bool operator==(const ValuesToNames<CurrencyNames>&o, const int & i)
 {
 	CurrencyNames cn;
 	return cn.getValue(o.m_key) == cn.getValue(i);
 	
 }
+//=======================================================================================
+//								operator ==
+//=======================================================================================
 bool operator==(const ValuesToNames<ClassNames>&o, const int & i)
 {
 	ClassNames cln;

@@ -1,12 +1,16 @@
 #include "IdValidator.h"
 
 
-
+//======================================================================
+//									ctor
+//======================================================================
 IdValidator::IdValidator()
 	:BaseValidator(" Wrong control digit ")
 {
 }
-
+//======================================================================
+//						check if ID is valid
+//======================================================================
 bool IdValidator::check(BaseField& obj) const
 {
 	std::string name = std::to_string(dynamic_cast<Field<uint32_t>&>(obj).getData());

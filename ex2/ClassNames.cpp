@@ -3,6 +3,10 @@
 
 using std::string;
 using std::pair;
+
+//=============================================================
+//							ctor
+//=============================================================
 ClassNames::ClassNames()
 {
 	//1 - First Class, 2 - Business Class, 3 - Economy Class

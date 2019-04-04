@@ -3,21 +3,29 @@
 #include "BaseField.h"
 
 static int n = 0;
+//=================================================
+//						c'tor
+//=================================================
 Form::Form()
 {
 }
-
+//=================================================
+//				Adding field to form 
+//=================================================
 void Form::addField(BaseField* field)
 {
 	m_fields.push_back(field);
 }
-
+//=================================================
+//			 Adding complex validator  
+//=================================================
 void Form::addValidator(BaseComplexValidator *d)
 {
 	m_complex_validators.push_back(d);
 }
-
-
+//==================================================
+//				filling form of user
+//==================================================
 void Form::fillForm()
 {
 	
@@ -43,7 +51,9 @@ void Form::fillForm()
 				validator->readData();
 			}
 }
-
+//============================================================
+//				check if all validator is leagal
+//============================================================
 bool Form::validateForm()
 {
 	for (const auto & field : m_fields)
@@ -56,7 +66,9 @@ bool Form::validateForm()
 
 	return true;
 }
-
+//=============================================================
+//					operator output for form 
+//=============================================================
 std::ostream & operator<<(std::ostream & os, const Form & obj)
 {
 	for (const auto &field : obj.m_fields)

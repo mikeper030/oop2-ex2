@@ -2,7 +2,9 @@
 
 using std::string;
 using std::pair;
-
+//=====================================================
+//				ctor
+//=====================================================
 CurrencyNames::CurrencyNames()
 {
 	//1 - NIS, 2 - Euro, 3 - Dollar

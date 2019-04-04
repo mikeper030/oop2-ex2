@@ -2,7 +2,9 @@
 using std::string;
 using std::pair;
 
-
+//======================================================================
+//						ctor
+//======================================================================
 DestinationNames::DestinationNames()
 {
 	//(1 - Rome, 2 - Prague, 3 - New York, 4 - India, 5 - Thailand)"

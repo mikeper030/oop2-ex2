@@ -3,91 +3,91 @@
   <Class Name="BaseField" Collapsed="true">
     <Position X="3.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAgAAAEAAAAAAAAAAAAMAAAAAAAIAAA=</HashCode>
+      <HashCode>AAAAAIEAAAAAQAkAACAAAABAAAAAAAAMAAAAAAAAAAA=</HashCode>
       <FileName>BaseField.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BaseValidator" Collapsed="true">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAEAAAAACAA=</HashCode>
+      <HashCode>AAAAAAAAAAAIQAEAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
       <FileName>BaseValidator.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Field&lt;T&gt;" Collapsed="true">
     <Position X="3.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAECgAA=</HashCode>
+      <HashCode>AAAQAAEAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAEAgAA=</HashCode>
       <FileName>Field.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Form" Collapsed="true">
     <Position X="9.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAABBAAAAAAAAAAAAgAAAAAAAAAAAAEAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAABBBCAAAAAAAAAAAAAAAAECAAAAAEAAAA=</HashCode>
       <FileName>Form.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="NoDigitValidator" Collapsed="true">
     <Position X="0.5" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAgACAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
       <FileName>NoDigitValidator.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="ValuesToNames" Collapsed="true">
+  <Class Name="ValuesToNames&lt;T&gt;" Collapsed="true">
     <Position X="9.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAA=</HashCode>
+      <HashCode>AAAQEICAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ValuesToNames.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RangeValidator" Collapsed="true">
+  <Class Name="RangeValidator&lt;T&gt;" Collapsed="true">
     <Position X="7.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAgIIAAAAAABAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>RangeValidator.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="IdValidator" Collapsed="true">
     <Position X="6" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAABAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAABAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IdValidator.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DestinationNames" Collapsed="true">
     <Position X="9.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DestinationNames.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ClassNames" Collapsed="true">
     <Position X="6" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
       <FileName>ClassNames.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CurrencyNames" Collapsed="true">
     <Position X="7.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAACAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>CurrencyNames.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DestinationToClassValidator" Collapsed="true">
+  <Class Name="DestinationToClassValidator&lt;T, D&gt;" Collapsed="true">
     <Position X="6" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AABgAAEAAAAIAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DestinationToClassValidator.h</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="DestinationToCurrencyValidator" Collapsed="true">
+  <Class Name="DestinationToCurrencyValidator&lt;T, D&gt;" Collapsed="true">
     <Position X="7.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAQAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AABgAAEAAAAIAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DestinationToCurrencyValidator.h</FileName>
     </TypeIdentifier>
   </Class>

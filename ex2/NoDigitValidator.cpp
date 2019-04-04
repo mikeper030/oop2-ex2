@@ -13,7 +13,7 @@ NoDigitValidator::NoDigitValidator()
 
 
 //***************************************************************************//
-//**							 check	
+//**							 check	if Name is valid
 //***************************************************************************//
 bool NoDigitValidator::check(BaseField& obj) const
 {
